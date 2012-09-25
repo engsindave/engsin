@@ -12,6 +12,6 @@
  *= require bootstrap_and_overrides
  */
 
-body {
-	padding-top: 40px;
+#header {
+	padding: 10px 0;
 }

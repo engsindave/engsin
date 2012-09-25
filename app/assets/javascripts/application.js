@@ -16,3 +16,29 @@
 //= require common
 //= require live-comment-preview
 //= require_self
+
+// Fixes navbar to top after scrolling down
+$(document).scroll(function(){
+	var $navbar = $('.navbar');
+	var $brand = $('.brand');
+	var $body = $('body');
+	var $header = $('#header');
+	// If has not activated (has no attribute "data-top")
+	if (!$navbar.attr('data-top')) {
+		// If already fixed, then do nothing
+		if ($navbar.hasClass('navbar-fixed-top')) return;
+		// Remember top position
+		var offset = $navbar.offset()
+		$navbar.attr('data-top', offset.top);
+	}
+	if ($navbar.attr('data-top') - $navbar.outerHeight() + $navbar.height() <= $(this).scrollTop())
+		$navbar.addClass('navbar-fixed-top'),
+		$brand.css({'display':'inline'}),
+		$body.css({'padding-top':$navbar.height()}),
+		$header.css({'padding-bottom':$navbar.height()});
+	else
+		$navbar.removeClass('navbar-fixed-top'),
+		$brand.css({'display':'none'}),
+		$body.css({'padding-top':'0'}),
+		$header.css({'padding-bottom':'10px'});
+});
