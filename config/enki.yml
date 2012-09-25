@@ -1,7 +1,7 @@
 # Configuration options for your blog - customise to taste
 # This file contains no secret information, so can be stored in source control (unlike database.yml)
 title: Blog Template
-url:   http://safe-woodland-8996.herokuapp.com/
+url:   http://safe-woodland-8996.herokuapp.com
 author:
   name:    Will Goto        # For copyright notice and ATOM feeds
   email:   will.r.goto@gmail.com # Exception emails will go here, and it is used in ATOM feeds
