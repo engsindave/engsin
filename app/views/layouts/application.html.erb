@@ -17,17 +17,17 @@
 		<!-- Navigation Bar -->
 		<div class="navbar">
 		  <div class="navbar-inner">
-			<div class="container">
-		    <%= link_to enki_config[:title], root_path, class: 'brand', style: "display: none;" %>
-				<ul class="nav">
-		      <% page_links_for_navigation.each do |link| -%>
-            <li><%= link_to(link.name, link.url) %></li>
-          <% end -%>
-		    </ul>
-				<form method="get" id="sform" action="http://www.google.com/search" class="navbar-search pull-right">
-				  <input type="text" id="q" class="search-query" placeholder="Search">
-					<%= hidden_field_tag 'sitesearch', enki_config[:url] %>
-				</form>
+				<div class="container">
+			    <%= link_to enki_config[:title], root_path, class: 'brand', style: "display: none;" %>
+					<ul class="nav">
+			      <% page_links_for_navigation.each do |link| -%>
+	            <li><%= link_to(link.name, link.url) %></li>
+	          <% end -%>
+			    </ul>
+					<form method="get" id="sform" action="http://www.google.com/search" class="navbar-search pull-right">
+					  <input type="text" id="q" class="search-query" placeholder="Search">
+						<%= hidden_field_tag 'sitesearch', enki_config[:url] %>
+					</form>
 				</div>
 		  </div>
 		</div>
@@ -59,9 +59,7 @@
         <% end -%>
 			</div>
 		</div>
-
 	  <div id="footer"><%= enki_config[:title] %> &#169; <%= enki_config[:author, :name] %>. Valid <a href="http://validator.w3.org/check?uri=referer">HTML5</a> and <%= link_to "ATOM", "http://feedvalidator.org/check.cgi?url=#{enki_config[:url]}/posts.atom" %>. Powered by <a href="http://www.enkiblog.com" title="A Ruby on Rails blogging app for the fashionable developer">Enki</a>.</div>
-	  </div>
   </div>
 </body>
 </html>
