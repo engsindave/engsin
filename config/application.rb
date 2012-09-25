@@ -66,5 +66,10 @@ module Enki
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # Heroku precompile assets before setting the database configuration
+    # so you need to set this configuration to false or your Rails application will try to connect
+    # to an unexisting database
+    config.assets.initialize_on_precompile = false
   end
 end
