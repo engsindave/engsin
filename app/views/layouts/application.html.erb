@@ -46,19 +46,23 @@
 			</div>
 			<!-- Sidebar -->
 			<div class="span4">
-				<h2>Sidebar</h2>
-        <ul>
-          <% page_links_for_navigation.each do |link| -%>
-            <li><%= link_to(link.name, link.url) %></li>
-          <% end -%>
-        </ul>
+				<div class="well" style="padding: 8px 0;">
+					<ul class="nav nav-list">
+						<li class="nav-header">Navigation</li>
+			      <% page_links_for_navigation.each do |link| -%>
+	            <li><%= link_to(link.name, link.url) %></li>
+	          <% end -%>
+			    </ul>
+				</div>
         <% unless category_links_for_navigation.empty? -%>
-          <h2>Categories</h2>
-          <ul>
-            <% category_links_for_navigation.each do |link| -%>
-              <li><%= link_to(link.name, link.url) %></li>
-            <% end -%>
-          </ul>
+					<div class="well" style="padding: 8px 0;">
+	          <ul class="nav nav-list">
+							<li class="nav-header">Categories</li>
+	            <% category_links_for_navigation.each do |link| -%>
+	              <li><%= link_to(link.name, link.url) %></li>
+	            <% end -%>
+	          </ul>
+					</div>
         <% end -%>
 			</div>
 		</div>
