@@ -3,11 +3,9 @@
   <%== post.body_html %>
 </div>
 <div class="meta">
-  <ul>
-    <li class="date">Posted on <%= format_post_date(post.published_at) %></li>
-    <li class="comments"><%= link_to pluralize(post.approved_comments.size, "comment"), post_path(post, :anchor => 'comments') %></li>
-    <% unless post.tags.empty? -%>
-      <li class="tags">Tagged <%= linked_tag_list(post.tags) %></li>
-    <% end -%>
-  </ul>
+	
+  <p class="muted"><small><span class="pull-right"><%= link_to pluralize(post.approved_comments.size, "comment"), post_path(post, :anchor => 'comments') %></span>Posted on <%= format_post_date(post.published_at) %>.
+		<% unless post.tags.empty? -%>
+     Tagged <%= linked_tag_list(post.tags) %>.
+    <% end -%></small></p>
 </div>
