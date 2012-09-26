@@ -38,7 +38,12 @@
 				<%= yield %>
 			</div>
 			<!-- Sidebar -->
-			<div class="span4">
+			<div class="span4" id="sidebar">
+				<% if current_page?(root_path) %>
+					<h1><%= enki_config[:title] %></h1>
+				<% else %>
+					<h3><%= enki_config[:title] %></h3>
+				<% end %>
 				<div class="well" style="padding: 8px 0;">
 					<ul class="nav nav-list">
 						<li class="nav-header">Navigation</li>
