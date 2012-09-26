@@ -12,6 +12,27 @@
  *= require bootstrap_and_overrides
  */
 
+html, body {
+  height: 100%;
+}
+
 #header {
 	padding: 10px 0;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -220px;
+	padding-left: 10px;
+}
+
+#push {
+  height: 260px;
+}
+
+#footer {
+	height: 180px;
+  clear: both;
 }
