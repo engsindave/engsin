@@ -26,46 +26,41 @@
 					<% end -%>
 				</tbody>
 			</table>
-			<p><%= link_to 'New Post', new_admin_post_path, class: 'btn btn-small' %> <%= link_to 'View Posts', admin_posts_path, class: 'btn btn-small' %></p>
+			<p><%= link_to 'New Post', new_admin_post_path, class: 'btn btn-small' %> <%= link_to 'View All Posts', admin_posts_path, class: 'btn btn-small' %></p>
 		</div>
 	</div>
 	<div class="span6" id="recent-comments">
 		<div class="well">
 			<h2>Latest Comments</h2>
-				<h3></h3>
-				<table class="table table-bordered table-condensed table-white">
-					<thead>
-						<tr>
-							<th>Date</th>
-							<th>Comments</th>
-							<th>Post</th>
-						</tr>
-					</thead>
-					<tbody>
-						<% @comment_activity.each_with_index do |activity, i| -%>
-						<tr>
-							<td><%= activity.most_recent_comment.created_at.strftime("%b %e") %></td>
-							<td>
-				        <% activity.comments.each_with_index do |comment, index| -%>
-				          <%= content_tag :span, :class => activity.comments.size == index + 1 ? 'last' : nil do -%>
-				            <%= link_to(comment.author, admin_comment_path(comment), {:id => "comment-link-#{comment.id}", :class => 'comment-link'}) -%><%= ',' if activity.comments.size != index + 1 %>
-				          <% end -%>
-				        <% end -%>
-							</td>
-							<td><%= link_to(truncate(activity.post.title, :length => 50), post_path(activity.post)) %></td>
-						</tr>
-					 <% activity.comments.each do |comment| -%>
+			<table class="table table-bordered table-condensed table-white">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Comments</th>
+						<th>Post</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @comment_activity.each_with_index do |activity, i| -%>
+					<tr>
+						<td><%= activity.most_recent_comment.created_at.strftime("%b %e") %></td>
+						<td>
+			        <% activity.comments.each_with_index do |comment, index| -%>
+			          <%= content_tag :span, :class => activity.comments.size == index + 1 ? 'last' : nil do -%>
+			            <%= link_to(comment.author, admin_comment_path(comment), {:id => "comment-link-#{comment.id}", :class => 'comment-link'}) -%><%= ',' if activity.comments.size != index + 1 %>
+			          <% end -%>
+			        <% end -%>
+						</td>
+						<td><%= link_to(truncate(activity.post.title, :length => 50), post_path(activity.post)) %></td>
+					</tr>
+					<% activity.comments.each do |comment| -%>
 						<tr>
 							<td class='comment-body' id='comment-body-<%= comment.id %>'>
 								<div class="comment-title">
-									<div class="pull-right">
-				            <%= form_for(comment, :as => :comment, :url => admin_comment_path(comment), :html => {:class => 'delete-item', :id => "delete-comment-#{comment.id}", :method => :delete}) do |form| -%>
-				              <%= image_submit_tag("silk/delete.png", :alt => 'Delete Comment') %>
-				            <% end -%>
-				          </div>
-									<div class="pull-right">
-				            <%= link_to(image_tag('silk/pencil.png', :alt => 'edit'), admin_comment_path(comment)) %>
-									</div>
+			            <%= form_for(comment, :as => :comment, :url => admin_comment_path(comment), :html => {:class => 'delete-item pull-right', :id => "delete-comment-#{comment.id}", :method => :delete}) do |form| -%>
+			              <%= image_submit_tag("silk/delete.png", :alt => 'Delete Comment') %>
+			            <% end -%>
+			            <%= link_to(image_tag('silk/pencil.png', :alt => 'Edit'), admin_comment_path(comment), class: 'pull-right') %>
 								<%= comment.author %> said:
 								</div>
 								<div class="comment-content">
@@ -73,10 +68,11 @@
 								</div>
 			        </div>
 						</tr>
-						<% end -%>
 					<% end -%>
-					</tbody>
-				</table>
+				<% end -%>
+				</tbody>
+			</table>
+			<p><%= link_to 'View All Comments', admin_comments_path, class: 'btn btn-small' %></p>
 		</div>
 	</div>
 </div>

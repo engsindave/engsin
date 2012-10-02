@@ -1,16 +1,15 @@
-<h1>Your posts</h1>
+<h1>All Posts</h1>
 
-<table id='posts'>
+<table class="table table-bordered table-condensed table-striped table-white" id='posts'>
   <thead>
     <tr>
-      <th>Published At</th>
+      <th>Published</th>
       <th>Title</th>
       <th>Excerpt</th>
       <th>Comments</th>
       <th>Actions</th>
     </tr>
   </thead>
-
   <tbody>
     <% if @posts.empty? -%>
       <tr><td colspan="5">There are no posts at this time.</td></tr>
@@ -18,14 +17,8 @@
       <%= render :partial => 'post', :collection => @posts %>
     <% end -%>
   </tbody>
-
-  <tfoot>
-    <% if @posts.total_pages > 1 -%>
-      <tr class="pagination">
-        <td colspan="5">
-          <%= will_paginate(@posts, :previous_label => '« Newer', :next_label => 'Older »') %>
-        </td>
-      </tr>
-    <% end -%>
-  </tfoot>
 </table>
+
+<% if @posts.total_pages > 1 -%>
+	<%= will_paginate @posts, :renderer => BootstrapPaginationHelper::LinkRenderer %>
+<% end -%>

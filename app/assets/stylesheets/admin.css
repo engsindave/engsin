@@ -26,8 +26,8 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -220px;
 	padding-left: 10px;
+	padding-bottom: 20px;
 }
 
 #admin-push {
@@ -58,6 +58,12 @@ html, body {
 /* Tables */
 .table-white {
 	background: #ffffff;
+}
+
+/* Delete Form */
+.delete-item {
+	margin-bottom: 0;
+	margin-left: 5px;
 }
 
 /* Comments in Dashboard */
@@ -96,18 +102,6 @@ html, body {
 #recent-comments .comment-content {
   padding: 9px 14px;
 }
-
-/* ---------- TABLES */
-
-div.pagination {
-  text-align: center;
-}
-
-div.pagination a {
-  color: #eeeeee;
-}
-
-.comment-actions img,
 
 /* --------- MESSAGING */
 .humanMsg .undo-link {
