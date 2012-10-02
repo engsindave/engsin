@@ -2,19 +2,24 @@
 <html dir="ltr" lang="en-US">
 <head>
   <meta charset="utf-8">
-  <title><%= enki_config[:title] %> - Admin Login</title>
-  <%= stylesheet_link_tag 'login' %>
+  <title>Login</title>
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag 'application' %>
 </head>
 <body>
-  <div id="page">
-    <div id="content">
-      <%= yield %>
-    </div>
-    <div id="nav">
-      <ul>
-        <li><%= link_to 'View Site', root_path, :title => 'View Site' %></li>
-      </ul>
-    </div>
-  </div>
+	<div class="container-fluid">
+		<div id="admin-push"></div>
+		<div class="navbar navbar-fixed-top navbar-inverse">
+		  <div class="navbar-inner">
+				<div class="container-fluid">
+			    <%= link_to 'Administrator', admin_root_path, class: 'brand' %>
+					<ul class="nav">
+			      <li><%= link_to 'Back to ' + enki_config[:title], root_path %></li>
+			    </ul>
+				</div>
+		  </div>
+		</div>
+		<%= yield %>
+	</div>
 </body>
 </html>
