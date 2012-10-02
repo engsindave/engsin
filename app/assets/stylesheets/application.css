@@ -54,3 +54,7 @@ html, body {
 	width: 370px;
 }
 
+/* Tables */
+.table-white {
+	background: #ffffff;
+}
