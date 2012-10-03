@@ -17,11 +17,9 @@
 html, body {
   height: 100%;
 }
-
 #header {
 	padding: 10px 0;
 }
-
 #wrap {
   min-height: 100%;
   height: auto !important;
@@ -29,15 +27,12 @@ html, body {
 	padding-left: 10px;
 	padding-bottom: 20px;
 }
-
 #admin-push {
 	height: 60px;
 }
-
 #push {
   height: 260px;
 }
-
 #footer {
 	height: 180px;
   clear: both;
@@ -60,10 +55,13 @@ html, body {
 	background: #ffffff;
 }
 
-/* Delete Form */
+/* Form Items */
 .delete-item {
 	margin-bottom: 0;
 	margin-left: 5px;
+}
+.undo-item {
+	margin-bottom: 0;
 }
 
 /* Comments in Dashboard */
@@ -85,7 +83,6 @@ html, body {
      -moz-background-clip: padding;
           background-clip: padding-box;
 }
-
 #recent-comments .comment-title {
   padding: 8px 14px;
   margin: 0;
@@ -98,7 +95,6 @@ html, body {
      -moz-border-radius: 5px 5px 0 0;
           border-radius: 5px 5px 0 0;
 }
-
 #recent-comments .comment-content {
   padding: 9px 14px;
 }

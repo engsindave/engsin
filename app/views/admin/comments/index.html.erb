@@ -1,9 +1,9 @@
 <h1>Comments</h1>
 
-<table id='comments'>
+<table class="table table-bordered table-condensed table-striped table-white" id='comments'>
   <thead>
     <tr>
-      <th>Created At</th>
+      <th>Created</th>
       <th>Commenter</th>
       <th>Excerpt</th>
       <th>Post</th>
@@ -18,14 +18,8 @@
       <%= render :partial => 'comment', :collection => @comments %>
     <% end -%>
   </tbody>
-
-  <tfoot>
-    <% if @comments.total_pages > 1 -%>
-      <tr class="pagination">
-        <td colspan='5'>
-          <%= will_paginate(@comments, :previous_label => '« Newer', :next_label => 'Older »') %>
-        </td>
-      </tr>
-    <% end -%>
-  </tfoot>
 </table>
+
+<% if @comments.total_pages > 1 -%>
+	<%= will_paginate @comments, :renderer => BootstrapPaginationHelper::LinkRenderer %>
+<% end -%>

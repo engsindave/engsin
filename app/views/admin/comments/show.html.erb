@@ -1,13 +1,36 @@
-<h1>Editing comment by <%= @comment.author %></h1>
+<h1>Editing Comment by <%= @comment.author %></h1>
 
-<%= semantic_form_for([:admin, @comment]) do |form| -%>
-  <%= form.inputs do -%>
-    <%= form.input :author %>
-    <%= form.input :author_url, :required => false %>
-    <%= form.input :author_email, :required => false %>
-    <%= form.input :body, :hint => "<a href='http://lesstile.rubyforge.org'>Lesstile enabled</a>.".html_safe %>
-  <% end %>
-  <%= form.actions do -%>
-    <%= form.action :submit, :as => :button %>
-  <% end -%>
-<% end -%>
+<div class="well">
+	<%= form_for([:admin, @comment], :html => {class: 'form-horizontal'}) do |f| -%>
+		<div class="control-group">
+			<%= f.label :author, 'Author', class: 'control-label' %>
+			<div class="controls">
+				<%= f.text_field :author %>
+			</div>
+		</div>
+		<div class="control-group">
+			<%= f.label :author_url, 'Website', class: 'control-label' %>
+			<div class="controls">
+				<%= f.text_field :author_url %>
+			</div>
+		</div>
+		<div class="control-group">
+			<%= f.label :author_email, 'Email', class: 'control-label' %>
+			<div class="controls">
+				<%= f.text_field :author_email %>
+			</div>
+		</div>
+		<div class="control-group">
+			<%= f.label :body, 'Body', class: 'control-label' %>
+			<div class="controls">
+				<%= f.text_area :body, class: 'input-xxlarge', rows: '12' %>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<%= f.submit class: 'btn' %>
+			</div>
+		</div>
+	<% end -%>
+</div>
+
