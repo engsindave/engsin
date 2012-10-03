@@ -1,10 +1,46 @@
-<%= form.inputs do -%>
-  <%= form.input :title -%>
-  <%= form.input :body, :hint => "<a href='http://textile.thresholdstate.com/'>Textile enabled</a>. Use Ctrl+E to switch between preview and edit mode.".html_safe -%>
-  <%= form.input :tag_list, :as => 'string', :required => false, :hint => 'Comma separated: ruby, rails&hellip;'.html_safe -%>
-<% end -%>
-<%= form.inputs do -%>
-  <%= form.input :published_at_natural, :label => 'Published at', :as => 'string', :hint => 'Example: now, yesterday, 1 hour from now, '.html_safe + link_to("more&hellip;".html_safe, "http://chronic.rubyforge.org/") -%>
-  <%= form.input :slug, :hint => "Leave blank for an auto-generated slug based on the title." -%>
-  <%= form.input :minor_edit, :as => 'boolean', :hint => 'Minor edits will not show up as refreshed in feed readers. Use this to fix spelling mistakes and the like.' unless @post.new_record? -%>
-<% end -%>
+<div class="well">
+	<%= form_for([:admin, @post], :html => {class: 'form-horizontal'}) do |f| -%>
+		<div class="control-group">
+			<%= f.label :title, 'Title', class: 'control-label' %>
+			<div class="controls">
+				<%= f.text_field :title, class: 'input-xxlarge' %>
+			</div>
+		</div>
+		<div class="control-group">
+			<%= f.label :body, 'Body', class: 'control-label' %>
+			<div class="controls">
+				<%= f.text_area :body, class: 'input-xxlarge', rows: '12' %>
+			</div>
+		</div>
+		<div class="control-group">
+			<%= f.label :tag_list, 'Tags', class: 'control-label' %>
+			<div class="controls">
+				<%= f.text_field :tag_list, class: 'input-xxlarge' %>
+			</div>
+		</div>
+		<div class="control-group">
+			<%= f.label :published_at_natural, 'Published', class: 'control-label' %>
+			<div class="controls">
+				<%= f.text_field :published_at_natural, value: 'now' %>
+				<span class="help-inline"><%= 'Examples: now, yesterday, 1 hour from now, Sun Aug 27 23:18:25, '.html_safe + link_to("more&hellip;".html_safe, "http://chronic.rubyforge.org/") %></span>
+			</div>
+		</div>
+		<div class="control-group">
+			<%= f.label :slug, 'Permalink', class: 'control-label' %>
+			<div class="controls">
+				<%= f.text_field :slug %>
+				<span class="help-inline">Leave blank for an auto-generated permalink based on the title.</span>
+			</div>
+		</div>	
+		<div class="control-group">
+			<div class="controls">
+				<% unless @post.new_record? %>
+					<%= f.label :minor_edit, class: 'checkbox' do %>
+						<%= f.check_box :minor_edit %> Minor edit
+					<% end %>
+				<% end %>
+				<%= f.submit class: 'btn' %>
+			</div>
+		</div>
+	<% end -%>
+</div>

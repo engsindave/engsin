@@ -22,3 +22,5 @@
 <% if @posts.total_pages > 1 -%>
 	<%= will_paginate @posts, :renderer => BootstrapPaginationHelper::LinkRenderer %>
 <% end -%>
+
+<p><%= link_to 'New Post', new_admin_post_path, class: 'btn btn-small' %></p>
