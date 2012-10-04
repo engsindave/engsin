@@ -15,8 +15,17 @@ Enki::Application.routes.draw do
     root :to => 'dashboard#show'
   end
 
+  scope :to => 'posts#index', :path => 'blog' do
+    get 'posts.:format', :as => :formatted_posts
+    get '(:tag)', :as => :posts
+  end
+  
+  match 'code', :controller => :posts, :action => :index, :tag => 'code'
+  match 'pages', :controller => :posts, :action => :index, :tag => 'pages'
+  
   resources :archives, :only => [:index]
-  resources :pages, :only => [:show]
+  resources :pages, :only => [:show], :path => ''
+  resources :site, :only => [:index]
 
   constraints :year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/ do
     get ':year/:month/:day/:slug/comments'  => 'comments#index'
@@ -24,11 +33,6 @@ Enki::Application.routes.draw do
     get ':year/:month/:day/:slug/comments/new' => 'comments#new'
     get ':year/:month/:day/:slug' => 'posts#show'
   end
-
-  scope :to => 'posts#index' do
-    get 'posts.:format', :as => :formatted_posts
-    get '(:tag)', :as => :posts
-  end
-
-  root :to => 'posts#index'
+  
+  root :to => 'site#index'
 end

@@ -38,12 +38,13 @@ describe Admin::SessionsController do
     end
   end
 
-  describe '#allow_login_bypass? when RAILS_ENV == production' do
-    it 'returns false' do
-      ::Rails.stub!(:env).and_return('production')
-      @controller.send(:allow_login_bypass?).should == false
-    end
-  end
+  # Temporarily disabled for showcasing purposes
+  # describe '#allow_login_bypass? when RAILS_ENV == production' do
+  #  it 'returns false' do
+  #    ::Rails.stub!(:env).and_return('production')
+  #    @controller.send(:allow_login_bypass?).should == false
+  #  end
+  # end
 end
 
 shared_examples_for "logged in and redirected to /admin" do

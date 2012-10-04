@@ -3,8 +3,8 @@ require File.dirname(__FILE__) + '/../spec_helper'
 describe PostsController do
   describe "route" do
     it "should generate index params" do
-      {:get => "/"}.should route_to(:controller => "posts", :action => "index")
-      {:get => "/posts.atom"}.should route_to(:controller => "posts", :action => "index", :format => 'atom')
+      {:get => "/"}.should route_to(:controller => "site", :action => "index")
+      {:get => "/blog.atom"}.should route_to(:controller => "posts", :action => "index", :format => 'atom')
     end
 
     it "should generate tag params" do

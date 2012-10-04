@@ -3,6 +3,7 @@ module NavigationHelper
     link = Struct.new(:name, :url)
     [link.new("Home", root_path)] + 
     Page.find(:all, :order => 'title').collect {|page| link.new(page.title, page_path(page.slug))} +
+    [link.new("Blog", posts_path)] + 
     [link.new("Archives", archives_path)]
   end
 
