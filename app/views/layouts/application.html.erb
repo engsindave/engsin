@@ -34,10 +34,10 @@
 		<!-- Body -->
 		<div class="row">
 			<!-- Page Content -->
-			<div class="span8">
+			<div class="span12">
 				<%= yield %>
 			</div>
-			<!-- Sidebar -->
+			<!-- Sidebar 
 			<div class="span4" id="sidebar">
 				<div class="well" style="padding: 8px 0;">
 					<ul class="nav nav-list">
@@ -57,12 +57,16 @@
 	          </ul>
 					</div>
         <% end -%>
-			</div>
+			</div> -->
 		</div>
 		<div id="push"></div>
   </div>
-	<div class="well" id="footer" style="margin-bottom:0;">
-		<div class="container"><%= enki_config[:title] %> &#169; <%= enki_config[:author, :name] %>. Valid <a href="http://validator.w3.org/check?uri=referer">HTML5</a> and <%= link_to "ATOM", "http://feedvalidator.org/check.cgi?url=#{enki_config[:url]}/posts.atom" %>. Powered by <a href="http://www.enkiblog.com" title="A Ruby on Rails blogging app for the fashionable developer">Enki</a>.</div>
+	<div id="footer">
+		<div class="container" id="footer-wrap">
+			<div class="well well-small" style="margin-bottom: 0;">
+				<%= enki_config[:title] %> &#169; <%= enki_config[:author, :name] %>. Valid <a href="http://validator.w3.org/check?uri=referer">HTML5</a> and <%= link_to "ATOM", "http://feedvalidator.org/check.cgi?url=#{enki_config[:url]}/posts.atom" %>. Powered by <a href="http://www.enkiblog.com" title="A Ruby on Rails blogging app for the fashionable developer">Enki</a>.
+			</div>
+		</div>
 	</div>
 </body>
 </html>
