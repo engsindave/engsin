@@ -20,6 +20,13 @@
 			</div>
 		</div>
 		<div class="control-group">
+			<%= f.label :page_order, 'Page Order', class: 'control-label' %>
+			<div class="controls">
+				<%= f.number_field :page_order, :in => 1...6 %>
+				<span class="help-inline">Order of link appearance in navigation bar (1 first, 5 last).</span>
+			</div>
+		</div>
+		<div class="control-group">
 			<div class="controls">
 				<%= f.submit class: 'btn' %>
 			</div>

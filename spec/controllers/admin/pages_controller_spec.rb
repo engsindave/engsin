@@ -67,7 +67,8 @@ describe Admin::PagesController do
       put :update, :id => 1, :page => {
         'title' => 'My Post',
         'slug'  => 'my-post',
-        'body'  => 'This is my post'
+        'body'  => 'This is my post',
+        'page_order' => '1'
       }
     end
 
@@ -75,16 +76,17 @@ describe Admin::PagesController do
       @page.should_receive(:update_attributes).with(
         'title' => 'My Post',
         'slug'  => 'my-post',
-        'body'  => 'This is my post'
+        'body'  => 'This is my post',
+        'page_order' => '1'
       )
 
       do_put
     end
 
-    it 'it redirects to show' do
+    it 'it redirects to index' do
       do_put
       response.should be_redirect
-      response.should redirect_to(admin_page_path(@page))
+      response.should redirect_to(admin_pages_path)
     end
   end
 

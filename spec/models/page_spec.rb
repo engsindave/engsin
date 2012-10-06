@@ -39,7 +39,8 @@ describe Page, 'validations' do
     {
       :title                => "My Page",
       :slug                 => "my-page",
-      :body                 => "body"
+      :body                 => "body",
+      :page_order           => "1"
     }
   end
 
@@ -53,6 +54,10 @@ describe Page, 'validations' do
 
   it 'is invalid with no body' do
     Page.new(valid_page_attributes.merge(:body => '')).should_not be_valid
+  end
+  
+  it 'is invalid with no page_order' do
+    Page.new(valid_page_attributes.merge(:page_order => '')).should_not be_valid
   end
 end
 
