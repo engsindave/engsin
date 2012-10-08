@@ -4,11 +4,15 @@ This template is a barebones scaffold for anyone who wants a blank slate for a s
 
 h2. Features
 
-Bootstrap styling for both the front end and the admin side
-Responsive navigation bar
-Independent homepage from the blog index
-Page URLs without the ‘page/’ precursor
-Customizable page order in the navigation bar
-Improved in-page SEO
-PostgreSQL production database for immediate deployment on Heroku
-Sticky footer
+* Bootstrap styling for both the front end and the admin side
+* Responsive navigation bar
+* Independent homepage from the blog index
+* Page URLs without the ‘page/’ precursor
+* Customizable page order in the navigation bar
+* Improved in-page SEO
+* PostgreSQL production database for immediate deployment on Heroku
+* Sticky footer
+
+h2. To Do List
+
+* Get form validation error notifications for posts and pages to play nicely with bootstrap
