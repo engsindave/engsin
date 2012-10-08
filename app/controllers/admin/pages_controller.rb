@@ -18,7 +18,7 @@ class Admin::PagesController < Admin::BaseController
       respond_to do |format|
         format.html {
           flash[:notice] = "Created page '#{@page.title}'"
-          redirect_to(:action => 'index')
+          redirect_to(:action => 'show', :id => @page)
         }
       end
     else
@@ -33,7 +33,7 @@ class Admin::PagesController < Admin::BaseController
       respond_to do |format|
         format.html {
           flash[:notice] = "Updated page '#{@page.title}'"
-          redirect_to(:action => 'index')
+          redirect_to(:action => 'show', :id => @page)
         }
       end
     else

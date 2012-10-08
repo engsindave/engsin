@@ -83,10 +83,10 @@ describe Admin::PagesController do
       do_put
     end
 
-    it 'it redirects to index' do
+    it 'it redirects to show' do
       do_put
       response.should be_redirect
-      response.should redirect_to(admin_pages_path)
+      response.should redirect_to(admin_page_path(@page))
     end
   end
 
