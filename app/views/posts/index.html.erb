@@ -16,6 +16,7 @@
 		<% else -%>
 			<% @posts.each do |post| -%>
 			<div class="post" id="<%= dom_id(post) %>">
+				<h2><%= link_to post.title, post %></h2>
 			  <%= render post %>
 			</div>
 			<hr />
