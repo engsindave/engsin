@@ -1,5 +1,6 @@
 class Page < ActiveRecord::Base
   validates_presence_of :title, :slug, :body, :page_order
+  validates_uniqueness_of :slug
 
   before_validation     :generate_slug
 
