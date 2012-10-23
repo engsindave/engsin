@@ -24,7 +24,6 @@ html, body {
   height: auto !important;
   height: 100%;
   margin: 0 auto -60px;
-	padding-left: 10px;
 }
 #admin-push {
 	height: 60px;
@@ -37,7 +36,6 @@ html, body {
   clear: both;
 }
 #footer-wrap {
-	padding-left: 10px
 }
 
 /* Global Sidebar */
