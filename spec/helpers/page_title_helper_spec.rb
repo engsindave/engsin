@@ -9,7 +9,7 @@ describe PageTitleHelper do
 
   describe '#posts_title with no tag' do
     it 'is the site title' do
-      posts_title(nil).should == "Blog Title"
+      posts_title(nil).should == "Blog - Blog Title"
     end
   end
 
