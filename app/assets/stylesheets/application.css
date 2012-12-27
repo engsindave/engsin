@@ -11,24 +11,3 @@
  *= require bootstrap_and_overrides
  *= require_self
  */
-
-/* General Layout Formatting */
-html, body {
-  height: 100%;
-}
-#header {
-	padding: 10px 0;
-}
-#wrap {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -60px;
-}
-#push {
-  height: 120px;
-}
-#footer {
-	height: 60px;
-  clear: both;
-}
