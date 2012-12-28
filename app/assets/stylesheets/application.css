@@ -11,3 +11,70 @@
  *= require bootstrap_and_overrides
  *= require_self
  */
+
+body {
+	background: #fcfcfc;
+}
+h1, h2 {
+.navbar {
+	margin-bottom: 0;
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+     -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+	position: relative;
+}
+.navbar-inner {
+	padding: 0;
+}
+.navbar-inner > .container {
+	width: 940px;
+}
+.debut-dark {
+	background: url('/assets/debut-dark.png');
+}
+.debut-dark > .container {
+	width: 1000px;
+}
+.image-lead {
+	background: url('/assets/esc-plant.jpg') no-repeat center center;
+	height: 350px;
+}
+.image-lead > .container {
+	color: #fcfcfc;
+	padding-top: 30px;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+}
+.content-lead {
+	margin-top: -20px;
+	position: relative;
+}
+.content-wrap {
+	background: #ffffff;
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+	-webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+     -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.content-header {
+	-webkit-border-radius: 2px 2px 0 0;
+     -moz-border-radius: 2px 2px 0 0;
+          border-radius: 2px 2px 0 0;
+}
+.content-header > h2 {
+	font-size: 20px;
+	line-height: 24px;
+	margin: 0px;
+	padding: 10px;
+}
+.content-padding {
+	padding: 10px;
+}
+.footer {
+	background: url('/assets/debut-dark.png');
+	color: #cccccc;
+	margin: 100px 0 0;
+	padding: 10px 0 40px;
+}
