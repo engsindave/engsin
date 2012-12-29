@@ -24,7 +24,7 @@ Enki::Application.routes.draw do
   match 'pages', :controller => :posts, :action => :index, :tag => 'pages'
   
   resources :archives, :only => [:index]
-  resources :pages, :only => [:show], :path => ''
+  resources :pages, :only => [:show]
   resources :site, :only => [:index]
 
   constraints :year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/ do
@@ -35,4 +35,6 @@ Enki::Application.routes.draw do
   end
   
   root :to => 'site#index'
+  
+  match 'company-profile' => 'site#company_profile'
 end
