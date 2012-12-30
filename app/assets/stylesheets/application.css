@@ -16,7 +16,7 @@ body {
 	background: url('/assets/cream-dust.png') #fcfcfc;
 }
 .logo {
-	background: #efefef;
+	background: rgb(245, 245, 245);
 	margin-left: -999px;
 	padding-left: 999px;
 }
@@ -24,7 +24,7 @@ body {
 		width: 0; 
 		height: 0; 
 		border-top: 100px solid transparent;
-		border-left: 100px solid #efefef;
+		border-left: 100px solid rgb(245, 245, 245);
 		position: absolute;
 		margin-left: 300px;
 }
