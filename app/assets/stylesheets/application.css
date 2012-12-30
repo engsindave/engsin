@@ -13,7 +13,7 @@
  */
 
 body {
-	background: #fcfcfc;
+	background:  url('/assets/cream-dust.png') #fcfcfc;
 }
 .navbar {
 	margin-bottom: 0;
@@ -29,7 +29,7 @@ body {
 	width: 940px;
 }
 .debut-dark {
-	background: url('/assets/debut-dark.png');
+	background: url('/assets/debut-dark.png') #222222;
 }
 .debut-dark > .container {
 	width: 1000px;
