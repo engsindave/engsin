@@ -4,11 +4,11 @@
 			<ul class="nav">
 				<li><%= link_to 'Home', root_path %></li>
 				<li class="dropdown">
-					<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
+					<a class="dropdown-toggle" id="our-company" role="button" data-toggle="dropdown" data-target="#" href="<%= url_for :controller => :site, :action => :about_us %>">
 						Our Company
 						<b class="caret"></b>
 					</a>
-					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+					<ul class="dropdown-menu" role="menu" aria-labelledby="our-company">
 						<li><%= link_to 'About Us', :controller => :site, :action => :about_us %></li>
 						<li><a href="#">Company Profile</a></li>
 						<li><a href="#">Mission Statement</a></li>
