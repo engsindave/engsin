@@ -36,4 +36,5 @@ Enki::Application.routes.draw do
   root :to => 'site#index'
   
   match 'company/about-us' => 'site#about_us'
+  match 'company/mission-statement' => 'site#mission_statement'
 end
