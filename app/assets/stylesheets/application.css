@@ -13,7 +13,20 @@
  */
 
 body {
-	background:  url('/assets/cream-dust.png') #fcfcfc;
+	background: url('/assets/cream-dust.png') #fcfcfc;
+}
+.logo {
+	background: #efefef;
+	margin-left: -999px;
+	padding-left: 999px;
+}
+.logo-edge {
+		width: 0; 
+		height: 0; 
+		border-top: 100px solid transparent;
+		border-left: 100px solid #efefef;
+		position: absolute;
+		margin-left: 300px;
 }
 .navbar {
 	margin-bottom: 0;
@@ -27,6 +40,9 @@ body {
 }
 .navbar-inner > .container {
 	width: 940px;
+}
+.cream-dust {
+	background: url('/assets/cream-dust.png') #fcfcfc;
 }
 .debut-dark {
 	background: url('/assets/debut-dark.png') #222222;
