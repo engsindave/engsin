@@ -71,6 +71,9 @@ body {
 .content-padding {
 	padding: 10px;
 }
+.content-main {
+	margin-top: 20px;
+}
 .footer {
 	background: url('/assets/debut-dark.png');
 	color: #cccccc;

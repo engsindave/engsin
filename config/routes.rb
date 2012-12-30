@@ -25,7 +25,6 @@ Enki::Application.routes.draw do
   
   resources :archives, :only => [:index]
   resources :pages, :only => [:show]
-  resources :site, :only => [:index]
 
   constraints :year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/ do
     get ':year/:month/:day/:slug/comments'  => 'comments#index'
@@ -36,5 +35,5 @@ Enki::Application.routes.draw do
   
   root :to => 'site#index'
   
-  match 'company-profile' => 'site#company_profile'
+  match 'about-us' => 'site#about_us'
 end
