@@ -2,18 +2,21 @@
 	<div class="container">
 		<div class="row">
 			<div class="span3">
-				<h5>About Us</h5>
-				<ul>
-					<li><a href="#">Company Profile</a></li>
-					<li><a href="#">Mission Statement</a></li>
-					<li><a href="#">Parent Profiles</a></li>
-					<li><a href="#">Associations</a></li>
-					<li><a href="#">Global Supply</a></li>
+				<h5>Company</h5>
+				<ul class="unstyled">
+					<li><%= link_to 'About Us', :controller => :site, :action => :about_us %></li>
+					<li><%= link_to "President's Message", :controller => :site, :action => :presidents_message %></li>
+					<li><%= link_to 'Mission Statement', :controller => :site, :action => :mission_statement %></li>
+					<li><%= link_to 'Global Supply', :controller => :site, :action => :global_supply %></li>
+					<li><a href="#">Quality</a></li>
+					<li><a href="#">Environment &amp; Safety</a></li>
+					<li><a href="#">Careers</a></li>
+					<li><a href="#">Contact Us</a></li>
 				</ul>
 			</div>
 			<div class="span3">
 				<h5>Products</h5>
-				<ul>
+				<ul class="unstyled">
 					<li><a href="#">Gerotors</a></li>
 					<li><a href="#">VVT</a></li>
 					<li><a href="#">VTC</a></li>
@@ -23,28 +26,13 @@
 				</ul>
 			</div>
 			<div class="span3">
-				<h5>Quality</h5>
-				<ul>
-					<li><a href="#">Certifications</a></li>
-					<li><a href="#">Inspection Capabilities</a></li>
-				</ul>
-				<h5>Environment &amp; Safety</h5>
-				<ul>
-					<li><a href="#">Environmental Policy</a></li>
-					<li><a href="#">Environmental Goals</a></li>
-					<li><a href="#">Safety Policy</a></li>
-					<li><a href="#">Safety Awards</a></li>
+				<h5>Links</h5>
+				<ul class="unstyled">
+					<li><%= link_to 'Sumitomo Electric Sintered Alloys', 'http://global-sei.com' %></li> 
+					<li><%= link_to 'Eaton Corporation', 'http://eaton.com' %></li>
 				</ul>
 			</div>
 			<div class="span3">
-				<h5>Careers</h5>
-				<ul>
-					<li><a href="#">Careers</a></li>
-				</ul>
-				<h5>Contact Us</h5>
-				<ul>
-					<li><a href="#">Contact Us</a></li>
-				</ul>
 			</div>
 		</div>
 	</div>
