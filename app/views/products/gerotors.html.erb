@@ -1,0 +1,21 @@
+<% content_for(:page_title) do -%>
+	<%= @page_title + " - Engineered Sintered Components" %>
+<% end -%>
+<div class="content-main">
+	<div class="row">
+		<div class="span3">
+			<%= render 'products/products_sidebar' %>
+		</div>
+		<div class="span9">
+			<h1>About Us</h1>
+			<p>Engineered Sintered Components was established in 1989, as a joint venture between <%= link_to 'Sumitomo Electric Sintered Alloys', 'http://global-sei.com' %> and <%= link_to 'Eaton Corporation', 'http://eaton.com' %>, to become one of the major suppliers of sintered metal components to the North American Automotive Industry.</p>
+			<p>Located 25 minutes north of Charlotte, North Carolina, ESC is positioned conveniently to support your needs in North America.  If a more global supplier is what you are looking for, ESC can support your needs.  Along with our parent Sumitomo Electric Sintered Alloys, our group is comprised of 10 facilities in 7 countries, making us one of the few truly global PM Companies.</p>
+			<p>Along with our ability to support your needs world-wide, ESC is unique in our industry as we can offer a "one-stop shop" location.  Whether your component requires specialized sintering or advanced secondary operations, ESC can support you with "in-house" capabilities.  Along with the standard P/M operations ESC offers, high temperature sintering, vacuum sintering, heat treatment, various machining, and surface finishing.</p>
+			<p>We are committed to provide the highest value to our customers, through innovation, technology development as well as continuous improvements in quality and productivity.  We are confident you will find the management team and our employees have fully embraced the ideals of growth through customer satisfaction.</p>
+			<p>We have also a commitment to a long term relationship with our customers, employees, suppliers, and community.</p>
+			<hr />
+			<h2>Associations</h2>
+			<p><%= link_to image_tag('/assets/mpif-logo.jpg', alt: 'MPIF', class: 'img img-rounded'), 'https://www.mpif.org' %> <%= link_to image_tag('/assets/centralina-logo.jpg', alt: 'Centralina Workforce', class: 'img img-rounded'), 'http://www.centralinaworks.com' %> <%= link_to image_tag('/assets/statesville-chamber-logo.jpg', alt: 'Statesville Chamber of Commerce', class: 'img img-rounded'), 'http://www.statesvillechamber.org' %></p>
+		</div>
+	</div>
+</div>
