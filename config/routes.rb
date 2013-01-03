@@ -41,4 +41,5 @@ Enki::Application.routes.draw do
   match 'company/global-supply' => 'site#global_supply'
   
   match 'products/gerotors' => 'products#gerotors'
+  match 'products/vvt-components' => 'products#vvt_components'
 end
