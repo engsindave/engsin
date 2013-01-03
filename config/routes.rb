@@ -39,4 +39,6 @@ Enki::Application.routes.draw do
   match 'company/presidents-message' => 'site#presidents_message'
   match 'company/mission-statement' => 'site#mission_statement'
   match 'company/global-supply' => 'site#global_supply'
+  
+  match 'products/gerotors' => 'products#gerotors'
 end
