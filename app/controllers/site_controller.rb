@@ -18,4 +18,8 @@ class SiteController < ApplicationController
   def quality
     @page_title = "Quality"
   end
+  
+  def environment_and_safety
+    @page_title = "Environment & Safety"
+  end
 end
