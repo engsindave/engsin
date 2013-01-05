@@ -18,4 +18,8 @@ class ProductsController < ApplicationController
   def sensor_rings
     @page_title = "Sensor Rings"
   end
+  
+  def sprockets_and_pulleys
+    @page_title = "Sprockets and Pulleys"
+  end
 end

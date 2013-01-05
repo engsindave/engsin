@@ -45,4 +45,5 @@ Enki::Application.routes.draw do
   match 'products/valve-train-components' => 'products#valve_train_components'
   match 'products/power-steering-components' => 'products#power_steering_components'
   match 'products/sensor-rings' => 'products#sensor_rings'
+  match 'products/sprockets-and-pulleys' => 'products#sprockets_and_pulleys'
 end
