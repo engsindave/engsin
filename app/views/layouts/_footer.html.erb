@@ -8,10 +8,6 @@
 					<li><%= link_to "President's Message", :controller => :site, :action => :presidents_message %></li>
 					<li><%= link_to 'Mission Statement', :controller => :site, :action => :mission_statement %></li>
 					<li><%= link_to 'Global Supply', :controller => :site, :action => :global_supply %></li>
-					<li><a href="#">Quality</a></li>
-					<li><a href="#">Environment &amp; Safety</a></li>
-					<li><a href="#">Careers</a></li>
-					<li><a href="#">Contact Us</a></li>
 				</ul>
 			</div>
 			<div class="span3">
@@ -27,6 +23,15 @@
 			</div>
 			<div class="span3">
 				<h5>Links</h5>
+				<ul class="unstyled">
+					<li><%= link_to 'Quality', :controller => :site, :action => :quality %></li>
+					<li><a href="#">Environment &amp; Safety</a></li>
+					<li><a href="#">Careers</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="span3">
+				<h5>Parent Companies</h5>
 				<ul class="unstyled">
 					<li><%= link_to 'Sumitomo Electric Sintered Alloys', 'http://global-sei.com' %></li> 
 					<li><%= link_to 'Eaton Corporation', 'http://eaton.com' %></li>

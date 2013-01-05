@@ -14,4 +14,8 @@ class SiteController < ApplicationController
   def global_supply
     @page_title = "Global Supply"
   end
+  
+  def quality
+    @page_title = "Quality"
+  end
 end
