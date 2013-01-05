@@ -10,4 +10,8 @@ class ProductsController < ApplicationController
   def valve_train_components
     @page_title = "Valve Train Components"
   end
+  
+  def power_steering_components
+    @page_title = "Power Steering Components"
+  end
 end

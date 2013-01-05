@@ -1,0 +1,16 @@
+<% content_for(:page_title) do -%>
+	<%= @page_title + " - Engineered Sintered Components" %>
+<% end -%>
+<div class="content-main">
+	<div class="row">
+		<div class="span3">
+			<%= render 'products/products_sidebar' %>
+		</div>
+		<div class="span9">
+			<h1>Power Steering Components</h1>
+			<p>A diverse product as far as applications and part geometry, our power steering components are a tesiment to our advantage for "in-house" operations. Whether it is the high temperature sintering or heat treatment, ESC offers our customers one location to meet their stringent application requirements. Along with the ability to meet these requirements with standard processes, we offer advanced technology such as sinterhardening and warm die compaction to meet your requirements. We take pride in our knowledge in high wear resistant applications, so feel free to use that expertise as you design your next component requring resistance to wear.</p>
+			<hr />
+			<p><%= image_tag('/assets/ps2.jpg', alt: 'power steering components', class: 'img-polaroid') %> <%= image_tag('/assets/ps.jpg', alt: 'power steering components', class: 'img-polaroid') %></p>
+		</div>
+	</div>
+</div>
