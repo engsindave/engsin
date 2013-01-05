@@ -14,4 +14,8 @@ class ProductsController < ApplicationController
   def power_steering_components
     @page_title = "Power Steering Components"
   end
+  
+  def sensor_rings
+    @page_title = "Sensor Rings"
+  end
 end

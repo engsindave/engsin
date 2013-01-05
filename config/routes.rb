@@ -44,4 +44,5 @@ Enki::Application.routes.draw do
   match 'products/vvt-components' => 'products#vvt_components'
   match 'products/valve-train-components' => 'products#valve_train_components'
   match 'products/power-steering-components' => 'products#power_steering_components'
+  match 'products/sensor-rings' => 'products#sensor_rings'
 end
