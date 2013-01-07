@@ -49,4 +49,5 @@ Enki::Application.routes.draw do
   
   match 'quality' => 'site#quality'
   match 'environment-and-safety' => 'site#environment_and_safety'
+  match 'environment' => 'site#environment'
 end

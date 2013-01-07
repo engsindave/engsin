@@ -22,4 +22,8 @@ class SiteController < ApplicationController
   def environment_and_safety
     @page_title = "Environment & Safety"
   end
+  
+  def environment
+    @page_title = "Environment"
+  end
 end
