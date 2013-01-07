@@ -26,4 +26,8 @@ class SiteController < ApplicationController
   def safety
     @page_title = "Safety"
   end
+  
+  def careers
+    @page_title = "Careers"
+  end
 end
