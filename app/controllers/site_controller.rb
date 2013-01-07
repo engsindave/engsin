@@ -19,11 +19,11 @@ class SiteController < ApplicationController
     @page_title = "Quality"
   end
   
-  def environment_and_safety
-    @page_title = "Environment & Safety"
-  end
-  
   def environment
     @page_title = "Environment"
+  end
+  
+  def safety
+    @page_title = "Safety"
   end
 end

@@ -48,6 +48,6 @@ Enki::Application.routes.draw do
   match 'products/sprockets-and-pulleys' => 'products#sprockets_and_pulleys'
   
   match 'quality' => 'site#quality'
-  match 'environment-and-safety' => 'site#environment_and_safety'
   match 'environment' => 'site#environment'
+  match 'safety' => 'site#safety'
 end
