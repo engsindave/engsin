@@ -1,0 +1,38 @@
+<% content_for(:page_title) do -%>
+	<%= @page_title + " - Engineered Sintered Components" %>
+<% end -%>
+<div class="content-main">
+	<div class="row">
+		<div class="span12">
+			<h1>Contact Us</h1>
+			<div class="row">
+				<div class="span4">
+					<div class="content-wrap">
+						<div class="content-padding">
+							<img id="map_image" src="https://maps.googleapis.com/maps/api/staticmap?center=250+Old+Murdock+Road,NC&zoom=14&size=300x300&sensor=false"/>
+						</div>
+					</div>
+				</div>
+				<div class="span8">
+					<address>
+						<strong>Engineered Sintered Components</strong><br />
+						250 Old Murdock Road<br />
+						Troutman, NC 28166<br />
+						<abbr title="Phone">P:</abbr> (704) 508-7500<br />
+						<abbr title="Fax">F:</abbr> (704) 508-7529<br />
+					</address>
+					<address>
+						<strong>Human Resources Department</strong><br />
+						Attn: Jan Comer<br />
+						Email: <%= mail_to 'jobs@engsin.com', 'jobs@engsin.com' %>
+					</address>
+					<address>
+						<strong>Sales Department</strong><br />
+						Attn: Mr. Manager<br />
+						Email: <%= mail_to 'sales@engsin.com', 'sales@engsin.com' %>
+					</address>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

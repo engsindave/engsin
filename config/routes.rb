@@ -51,4 +51,5 @@ Enki::Application.routes.draw do
   match 'environment' => 'site#environment'
   match 'safety' => 'site#safety'
   match 'careers' => 'site#careers'
+  match 'contact' => 'site#contact'
 end
