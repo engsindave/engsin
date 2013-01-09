@@ -32,6 +32,18 @@ h1, h2, h3 {
 #push {
   height: 380px;
 }
+.header-links {
+	color: #888888;
+	margin-top: 40px;
+}
+.header-links li {
+	display: inline;
+	padding-left: 10px;
+}
+.header-links a {
+	color: #888888;
+	text-transform: uppercase;
+}
 .footer {
 	background: url('/assets/debut-dark.png');
 	color: #cccccc;
