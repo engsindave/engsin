@@ -4,6 +4,7 @@
 			<div class="span3">
 				<h5>Company</h5>
 				<ul class="unstyled">
+					<li><%= link_to 'Home', root_path %></li>
 					<li><%= link_to 'About Us', :controller => :site, :action => :about_us %></li>
 					<li><%= link_to "President's Message", :controller => :site, :action => :presidents_message %></li>
 					<li><%= link_to 'Mission Statement', :controller => :site, :action => :mission_statement %></li>
@@ -22,7 +23,7 @@
 				</ul>
 			</div>
 			<div class="span3">
-				<h5>Links</h5>
+				<h5>Navigation</h5>
 				<ul class="unstyled">
 					<li><%= link_to 'Quality', :controller => :site, :action => :quality %></li>
 					<li><%= link_to 'Environment', :controller => :site, :action => :environment %></li>
@@ -37,6 +38,7 @@
 					<li><%= link_to 'Sumitomo Electric Sintered Alloys', 'http://global-sei.com' %></li> 
 					<li><%= link_to 'Eaton Corporation', 'http://eaton.com' %></li>
 				</ul>
+				<p><%= image_tag('/assets/engsin-logo-white.png') %></p>
 			</div>
 			<div class="span3">
 			</div>
