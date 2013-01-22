@@ -3,14 +3,45 @@
 <% end -%>
 <div class="content-main">
 	<div class="row">
-		<div class="span3">
-			<%= render 'company/company_sidebar' %>
-		</div>
-		<div class="span9">
+		<div class="span12">
 			<h1>Global Supply</h1>
 			<div class="content-wrap">
 				<div class="content-padding">
-					<img id="map_image" src="https://maps.googleapis.com/maps/api/staticmap?center=51+Wall+Street,NY&zoom=14&size=678x300&sensor=false"/>
+					<script>
+				    var map;
+				    function initialize() {
+							var locations = [
+								['ESC', 35.710664, -80.888944, 1 ],
+							  ['SESG', 48.972127 ,8.312271, 2],
+							];
+							var myLatlng = new google.maps.LatLng(35.710664,-80.888944);
+				      var mapOptions = {
+				        zoom: 2,
+				        center: myLatlng,
+				        mapTypeId: google.maps.MapTypeId.ROADMAP
+				      };
+				      map = new google.maps.Map(document.getElementById('map_canvas'),
+				          mapOptions);
+
+			        var infowindow = new google.maps.InfoWindow();
+							var marker, i;
+							for (i = 0; i < locations.length; i++) {  
+							  marker = new google.maps.Marker({
+							    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+							    map: map,
+									title: locations[i][0]
+							  });
+							  google.maps.event.addListener(marker, 'click', (function(marker, i) {
+							    return function() {
+							      infowindow.setContent(locations[i][0]);
+							      infowindow.open(map, marker);
+							    }
+							  })(marker, i));
+							}
+				    }
+				    google.maps.event.addDomListener(window, 'load', initialize);
+				  </script>
+					<div id="map_canvas" style="height: 600px;"></div>
 				</div>
 			</div>
 		</div>
