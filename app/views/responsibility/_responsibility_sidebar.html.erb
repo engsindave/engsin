@@ -1,0 +1,8 @@
+<div class="well" style="padding: 8px 0;">
+	<ul class="nav nav-list">
+		<li class="nav-header">Responsibility</li>
+		<li class="<%= "active" if @page_title == 'Quality' %>"><%= link_to 'Quality', :controller => :responsibility, :action => :quality %></li>
+		<li class="<%= "active" if @page_title == 'Environment' %>"><%= link_to 'Environment', :controller => :responsibility, :action => :environment %></li>
+		<li class="<%= "active" if @page_title == 'Safety' %>"><%= link_to 'Safety', :controller => :responsibility, :action => :safety %></li>
+	</ul>			
+</div>

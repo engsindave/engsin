@@ -47,9 +47,10 @@ Enki::Application.routes.draw do
   match 'products/sensor-rings' => 'products#sensor_rings'
   match 'products/sprockets-and-pulleys' => 'products#sprockets_and_pulleys'
   
-  match 'quality' => 'site#quality'
-  match 'environment' => 'site#environment'
-  match 'safety' => 'site#safety'
+  match 'responsibility/quality' => 'responsibility#quality'
+  match 'responsibility/environment' => 'responsibility#environment'
+  match 'responsibility/safety' => 'responsibility#safety'
+  
   match 'careers' => 'site#careers'
   match 'contact' => 'site#contact'
 end

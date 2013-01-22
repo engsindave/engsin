@@ -22,7 +22,7 @@
 					<%= image_tag('/assets/quality-thumb.jpg', alt: 'ESC Quality') %>
 					<div class="content-padding">
 						<p>Engineered Sintered Components (ESC) is committed to our motto, which is "Safety First, Quality next". We firmly believe that by committing to exemplary quality, we offer our customers a value added experience.</p>
-						<p><%= link_to 'Learn more...', quality_path %></p>
+						<p><%= link_to 'Learn more...', :controller => :responsibility, :action => :quality %></p>
 					</div>
 				</div>
 			</div>
@@ -34,7 +34,7 @@
 					<%= image_tag('/assets/environment-thumb.png', alt: 'ESC Environment') %>
 					<div class="content-padding">
 						<p>Engineered Sintered Components (ESC) is committed to creating a safe work environment for our employees while supporting the effort to improve our overall impact to our environment.</p>
-						<p><%= link_to 'Learn more...', environment_path %></p>
+						<p><%= link_to 'Learn more...', :controller => :responsibility, :action => :environment %></p>
 					</div>
 				</div>
 			</div>

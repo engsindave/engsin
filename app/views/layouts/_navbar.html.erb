@@ -31,13 +31,13 @@
 		    </li>
 				<li class="dropdown">
 					<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
-						Responsibilities
+						Responsibility
 						<b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-						<li><%= link_to 'Quality', :controller => :site, :action => :quality %></li>
-						<li><%= link_to 'Environment', :controller => :site, :action => :environment %></li>
-						<li><%= link_to 'Safety', :controller => :site, :action => :safety %></li>
+						<li><%= link_to 'Quality', :controller => :responsibility, :action => :quality %></li>
+						<li><%= link_to 'Environment', :controller => :responsibility, :action => :environment %></li>
+						<li><%= link_to 'Safety', :controller => :responsibility, :action => :safety %></li>
 					</ul>
 				</li>
 				<li><%= link_to 'Careers', :controller => :site, :action => :careers %></li>

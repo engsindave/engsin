@@ -121,7 +121,8 @@ h1, h2, h3 {
 }
 .content-header {
 	background: #eeeeee;
-	margin: -1px -1px 5px;
+	border-bottom: 5px solid #6195cf;
+	margin: -1px -1px 0;
 	color: #666666;
 	-webkit-border-radius: 2px 2px 0 0;
      -moz-border-radius: 2px 2px 0 0;
