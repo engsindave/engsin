@@ -29,9 +29,17 @@
 						<li><%= link_to 'Sprockets and Pulleys', :controller => :products, :action => :sprockets_and_pulleys %></li>
 					</ul>
 		    </li>
-				<li><%= link_to 'Quality', :controller => :site, :action => :quality %></li>
-				<li><%= link_to 'Environment', :controller => :site, :action => :environment %></li>
-				<li><%= link_to 'Safety', :controller => :site, :action => :safety %></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
+						Responsibilities
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li><%= link_to 'Quality', :controller => :site, :action => :quality %></li>
+						<li><%= link_to 'Environment', :controller => :site, :action => :environment %></li>
+						<li><%= link_to 'Safety', :controller => :site, :action => :safety %></li>
+					</ul>
+				</li>
 				<li><%= link_to 'Careers', :controller => :site, :action => :careers %></li>
 				<li><%= link_to 'Contact', :controller => :site, :action => :contact %></li>
 			</ul>
