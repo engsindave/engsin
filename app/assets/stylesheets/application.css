@@ -39,7 +39,7 @@ h1, h2, h3 {
   margin: 0 auto -210px;
 }
 #push {
-  height: 380px;
+  height: 280px;
 }
 .header-links {
 	color: #888888;
@@ -50,7 +50,7 @@ h1, h2, h3 {
 	padding-left: 10px;
 }
 .header-links a {
-	color: #888888;
+	color: #6195cf;
 	text-transform: uppercase;
 }
 .footer {
@@ -115,11 +115,14 @@ h1, h2, h3 {
   -webkit-border-radius: 2px;
      -moz-border-radius: 2px;
           border-radius: 2px;
-	-webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-     -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .content-header {
+	background: #eeeeee;
+	margin: -1px -1px 5px;
+	color: #666666;
 	-webkit-border-radius: 2px 2px 0 0;
      -moz-border-radius: 2px 2px 0 0;
           border-radius: 2px 2px 0 0;
