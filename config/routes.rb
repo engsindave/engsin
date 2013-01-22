@@ -50,6 +50,7 @@ Enki::Application.routes.draw do
   match 'responsibility/quality' => 'responsibility#quality'
   match 'responsibility/environment' => 'responsibility#environment'
   match 'responsibility/safety' => 'responsibility#safety'
+  match 'responsibility/community' => 'responsibility#community'
   
   match 'careers' => 'site#careers'
   match 'contact' => 'site#contact'
