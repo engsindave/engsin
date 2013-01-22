@@ -35,10 +35,10 @@ Enki::Application.routes.draw do
   
   root :to => 'site#index'
   
-  match 'company/about-us' => 'site#about_us'
-  match 'company/presidents-message' => 'site#presidents_message'
-  match 'company/mission-statement' => 'site#mission_statement'
-  match 'company/global-supply' => 'site#global_supply'
+  match 'company/about-us' => 'company#about_us'
+  match 'company/presidents-message' => 'company#presidents_message'
+  match 'company/mission-statement' => 'company#mission_statement'
+  match 'company/global-supply' => 'company#global_supply'
   
   match 'products/gerotors' => 'products#gerotors'
   match 'products/vvt-components' => 'products#vvt_components'

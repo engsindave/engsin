@@ -4,15 +4,15 @@
 			<ul class="nav">
 				<li><%= link_to 'Home', root_path %></li>
 				<li class="dropdown">
-					<a class="dropdown-toggle" id="our-company" role="button" data-toggle="dropdown" data-target="#" href="<%= url_for :controller => :site, :action => :about_us %>">
+					<a class="dropdown-toggle" id="our-company" role="button" data-toggle="dropdown" data-target="#" href="#">
 						Company
 						<b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="our-company">
-						<li><%= link_to 'About Us', :controller => :site, :action => :about_us %></li>
-						<li><%= link_to "President's Message", :controller => :site, :action => :presidents_message %></li>
-						<li><%= link_to 'Mission Statement', :controller => :site, :action => :mission_statement %></li>
-						<li><%= link_to 'Global Supply', :controller => :site, :action => :global_supply %></li>
+						<li><%= link_to 'About Us', :controller => :company, :action => :about_us %></li>
+						<li><%= link_to "President's Message", :controller => :company, :action => :presidents_message %></li>
+						<li><%= link_to 'Mission Statement', :controller => :company, :action => :mission_statement %></li>
+						<li><%= link_to 'Global Supply', :controller => :company, :action => :global_supply %></li>
 					</ul>
 		    </li>
 				<li class="dropdown">

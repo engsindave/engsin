@@ -1,0 +1,9 @@
+<div class="well" style="padding: 8px 0;">
+	<ul class="nav nav-list">
+		<li class="nav-header">Company</li>
+		<li class="<%= "active" if @page_title == 'About Us' %>"><%= link_to 'About Us', :controller => :company, :action => :about_us %></li>
+		<li class="<%= "active" if @page_title == "President's Message" %>"><%= link_to "President's Message", :controller => :company, :action => :presidents_message %></li>
+		<li class="<%= "active" if @page_title == 'Mission Statement' %>"><%= link_to 'Mission Statement', :controller => :company, :action => :mission_statement %></li>
+		<li class="<%= "active" if @page_title == 'Global Supply' %>"><%= link_to 'Global Supply', :controller => :company, :action => :global_supply %></li>
+	</ul>			
+</div>
