@@ -11,10 +11,14 @@
 				    var map;
 				    function initialize() {
 							var locations = [
-								['ESC', 35.710664, -80.888944, 1 ],
-							  ['SESG', 48.972127 ,8.312271, 2],
+								['<p>ESC (USA)</p>', 35.710664, -80.888944, 1 ],
+							  ['<p>SESG (Germany)</p><p><img src="/assets/SESG.jpg" alt="SESG"/></p>', 51.165691 ,10.451526, 2],
+								['<p>KSM (Korea)</p><p><img src="/assets/KSM.jpg" alt="KSM"/></p>', 35.907757, 127.766922, 3],
+								['<p>SEST (Thailand)</p><p><img src="/assets/SEST.jpg" alt="SEST"/></p>', 15.870032, 100.992541, 4],
+								['<p>SESC (Malaysia)</p><p><img src="/assets/SESC.jpg" alt="SESC"/></p>', 4.210484, 101.975766, 5],
+								['<p>PSP & SPW (China)</p><p><img src="/assets/PSP.jpg" alt="PSP"/><img src="/assets/SPW.jpg" alt="SPW"/></p>', 39.90403, 116.407526, 6]
 							];
-							var myLatlng = new google.maps.LatLng(35.710664,-80.888944);
+							var myLatlng = new google.maps.LatLng(30.570692, 10.996166);
 				      var mapOptions = {
 				        zoom: 2,
 				        center: myLatlng,
@@ -35,6 +39,7 @@
 							    return function() {
 							      infowindow.setContent(locations[i][0]);
 							      infowindow.open(map, marker);
+										map.panTo(new google.maps.LatLng(locations[i][1]+20, locations[i][2]));
 							    }
 							  })(marker, i));
 							}
