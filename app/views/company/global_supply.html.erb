@@ -11,12 +11,13 @@
 				    var map;
 				    function initialize() {
 							var locations = [
-								['<p>ESC (USA)</p>', 35.710664, -80.888944, 1 ],
-							  ['<p>SESG (Germany)</p><p><img src="/assets/SESG.jpg" alt="SESG"/></p>', 51.165691 ,10.451526, 2],
-								['<p>KSM (Korea)</p><p><img src="/assets/KSM.jpg" alt="KSM"/></p>', 35.907757, 127.766922, 3],
-								['<p>SEST (Thailand)</p><p><img src="/assets/SEST.jpg" alt="SEST"/></p>', 15.870032, 100.992541, 4],
-								['<p>SESC (Malaysia)</p><p><img src="/assets/SESC.jpg" alt="SESC"/></p>', 4.210484, 101.975766, 5],
-								['<p>PSP & SPW (China)</p><p><img src="/assets/PSP.jpg" alt="PSP"/><img src="/assets/SPW.jpg" alt="SPW"/></p>', 39.90403, 116.407526, 6]
+								['<p class="global-supply"><img class="global-supply-img" src="/assets/esc.jpg" alt="ESC"/><strong>Engineered Sintered Components (ESC)</strong><br />North Carolina, USA</p>', 35.710664, -80.888944, 1 ],
+							  ['<p class="global-supply"><img class="global-supply-img" src="/assets/SESG.jpg" alt="SESG"/><strong>Sumitomo Electric Sintered Components (G) GmbH (SESG)</strong><br />Zittau, Germany</p>', 50.899968, 14.802997, 2],
+								['<p class="global-supply"><img class="global-supply-img" src="/assets/KSM.jpg" alt="KSM"/><strong>Korea Sintered Metal (KSM)</strong><br />Daegu, Korea<br /><a href="http://www.iksm.co.kr">http://www.iksm.co.kr</a></p>', 35.734228, 128.472266, 3],
+								['<p class="global-supply"><img class="global-supply-img" src="/assets/SEST.jpg" alt="SEST"/><strong>Sumitomo Electric Sintered Components (T) Co. Ltd (SEST)</strong><br />Bang Pakong, Thailand</p>', 13.542778, 100.993889, 4],
+								['<p class="global-supply"><img class="global-supply-img" src="/assets/SESC.jpg" alt="SESC"/><strong>Sumitomo Electric Sintered Components (M) Sdn Bhd (SESC)</strong><br />Shah Alam, Malaysia<br /><a href="http://www.sesc.com">http://www.sesc.com</a></p>', 3.00375, 101.558, 5],
+								['<p class="global-supply"><img class="global-supply-img" src="/assets/PSP.jpg" alt="PSP"/><img class="global-supply-img" src="/assets/SPW.jpg" alt="SPW"/><strong>Precision Sintered Products Co. Ltd (PSP) <em>Left</em></strong><br />Wuxi City, P.R. China<br /><strong>Sumiden Powder Metallurgy Wuxi Co. Ltd (SPW) <em>Right</em></strong><br />Wuxi City, P.R. China</p>', 31.53804, 120.384505, 6],
+								['<p class="global-supply"><img class="global-supply-img" src="" /><strong>Sumitomo Electric Sintered Alloy, Ltd</strong><br />Okayama, Japan</p>', 34.784862, 133.528433, 7]
 							];
 							var myLatlng = new google.maps.LatLng(30.570692, 10.996166);
 				      var mapOptions = {
@@ -39,7 +40,7 @@
 							    return function() {
 							      infowindow.setContent(locations[i][0]);
 							      infowindow.open(map, marker);
-										map.panTo(new google.maps.LatLng(locations[i][1]+20, locations[i][2]));
+										map.panTo(new google.maps.LatLng(locations[i][1], locations[i][2]));
 							    }
 							  })(marker, i));
 							}

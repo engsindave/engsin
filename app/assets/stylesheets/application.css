@@ -139,3 +139,10 @@ h1, h2, h3 {
 .content-main {
 	margin-top: 20px;
 }
+.global-supply {
+	padding-top: 5px;
+}
+.global-supply-img {
+	float: left;
+	padding-right: 10px;
+}
