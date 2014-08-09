@@ -1,4 +1,4 @@
-(function () {
+$(document).ready(function () {
     var openPositions = [
         {
             name: 'Coining Operator',
@@ -65,4 +65,4 @@
 
     $('.open-positions').append(openList);
     $('.applicable-positions').append(applicableList);
-})();
+});
