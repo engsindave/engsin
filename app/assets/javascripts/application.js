@@ -15,6 +15,7 @@
 //= require twitter/bootstrap
 //= require common
 //= require live-comment-preview
+//= require careers
 //= require_self
 
 // Fixes navbar to top after scrolling down
