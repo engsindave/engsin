@@ -19,11 +19,25 @@
 			<hr />
 			<div class="row">
 				<div class="span12">
-					<p>We believe the success of Engineered Sintered Components (ESC) depends ultimately on the performance of its employees. Hiring individuals with good work ethics, positive attitudes, and a philosophy of continuous self-improvement, will allow ESC to continue well into the future. ESC focuses on the positive behavior of employees, encourages employee involvement, encourages two way open communication, compensates competitively, provides training for organizational and individual success, maintains effective performance appraisal systems, and emphasizes promoting from within the Company. This will form the foundation for a work environment that is characterized by mutual trust, mutual respect, and the individual freedom necessary for exceptionally high employee performance. By following this business philosophy, profitability is achieved, allowing everyone to share in our success.</p>
-					<p>We know you will find ESC progressively challenging and continuously seeking innovation allowing us to be the leading PM component supplier in North America.</p>
-					<p>For job inquiries, please email us at <%= mail_to 'jobs@engsin.com', 'jobs@engsin.com' %>.</p>
+					<p>We believe the success of ESC/ESCA depends ultimately on the performance of its employees. Hiring individuals with good work ethics, positive attitudes, and a philosophy of continuous self-improvement, will allow ESC/ESCA to continue to be successful well into the future.</p>
+					<p>To complete an application online, please select one of the links next to the position you are interested in. You may also apply to more than one position if interested. We receive resumes via email: <%= mail_to 'HRdepartment@engsin.com', 'HRdepartment@engsin.com' %>. Additionally, applications and resumes are accepted at the Employment Security Commissions in Statesville and Mooresville.</p>
+					<p>
+						Day shift is from 7:00 a.m. to 7:30 p.m. (rotating days)<br />
+						Night shift is from 7:00 p.m. to 7:30 a.m. (rotating days)
+                    </p>
+					<hr />
+					<h2>Positions currently opened are:</h2>
+					<ul class="open-positions"></ul>
+					<h2>You may also submit an application for the following positions:</h2>
+					<ul class="applicable-positions"></ul>
+					<hr />
+					<p>
+						Information on the status of applications cannot be given, but the website is updated daily to keep the jobs that are opened updated. No phone calls, please.  Applications will be kept on file for one year. You may resubmit an application to keep the status of your application updated. Thank you for considering Engineered Sintered Components as a potential employer.
+					</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<%= javascript_include_tag 'admin/careers.js' %>
